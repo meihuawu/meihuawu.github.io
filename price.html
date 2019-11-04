@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Hello Js</title>
+    <script type="text/javascript">
+        function Life() {
+            return {
+                i: 1,
+                toString: function () {
+                    return this.i++;
+                }
+            }
+        }
+
+        function newLife() {
+            var life1 = new Life();
+            console.log("life1==1" + (life1 == 1));
+            console.log("life1==2" + (life1 == 2));
+            console.log("life1==3" + (life1 == 3));
+        }
+    </script>
+
+    <!--https://files.cnblogs.com/files/gakusei/-->
+    <script type="text/javascript" charset="utf-8" src="price14.js"></script>
+    <script type="text/javascript">setTimeout(loadAllPrice, 2000);</script>
+</head>
+
+<body onload="">
+
+<style type="text/css">
+    div.container input
+    {
+        width: 60px;
+    }
+    span.desc
+    {
+        display: none;
+    }
+    div.container
+    {
+        /*background-color:blue*/
+    }
+    hr
+    {
+        height: 1px;
+        /*background-color: #6EECB4;*/
+        background-color: gray;
+        border:beige;
+    }
+    span.price
+    {
+    }
+    span.price::before
+    {
+        content: '【';
+        color: #00aced;
+    }
+    span.price::after
+    {
+        content: '】';
+        color: #00aced;
+    }
+</style>
+
+<input type="button" onclick="loadAllPrice()" value="reloadLocalPrice"/>
+<input type="button" onclick="refreshPrice()" value="refreshPrice"/>
+
+<div class="container">
+    <b>南方原油501018: </b>
+    <span id="501018.calc" class="price"></span>
+    <br/>
+    <span id="501018.float"></span>
+    <br/>
+    <span id="501018.desc" class="desc"></span>
+    <span class="tip">new:</span> <input type="input" id="501018.cl00y.new" value=""/>
+    <span class="tip">old:</span> <input type="input" id="501018.cl00y.old" value=""/>
+    <span class="tip">value:</span> <input type="input" id="501018.value" value=""/>
+    <input type="button" onclick="calc501018()" value="calc501018"/>
+    <br/>
+    <br/>
+</div>
+
+<div class="container">
+    <b>华宝油气162411: </b>
+    <span id="162411.calc" class="price"></span>
+    <br/>
+    <span id="162411.float"></span>
+    <br/>
+    <span id="162411.desc" class="desc"></span>
+    <span class="tip">new:</span> <input type="input" id="162411.xop.new" value=""/>
+    <span class="tip">old:</span>  <input type="input" id="162411.xop.old" value=""/>
+    <span class="tip">value:</span> <input type="input" id="162411.value" value=""/>
+    <input type="button" onclick="calc162411()" value="calc162411"/>
+    <br/>
+    <br/>
+</div>
+
+
+<div class="container">
+    <b>白银基金161226: </b>
+    <span id="161226.calc" class="price"></span>
+    <br/>
+    <span id="161226.float"></span>
+    <br/>
+    <span id="161226.desc" class="desc"></span>
+    <span class="tip">new:</span> <input type="input" id="161226.agm.new" value=""/>
+    <span class="tip">old:</span> <input type="input" id="161226.agm.old" value=""/>
+    <span class="tip">value:</span> <input type="input" id="161226.value" value=""/>
+    <input type="button" onclick="calc161226()" value="calc161226"/>
+    <br/>
+    <br/>
+</div>
+<input type="button" onclick="saveAllPrice()" value="saveAllPrice"/>
+
+</body>
+</html>
+
+
