@@ -382,7 +382,7 @@ function formatString(str, args) {
             var oldPrice = +document.getElementById("501018.cl00y.old").value;
             var newPrice = +document.getElementById("501018.cl00y.new").value;
             var desc = "公式: " + bookValue + " * " + newPrice + " / " + oldPrice;
-            var calcValue = bookValue * newPrice / oldPrice;
+            var calcValue = bookValue * (1 + (newPrice / oldPrice - 1) * 0.68);
             document.getElementById("501018.calc").innerText = calcValue.toFixed(3);
             document.getElementById("501018.desc").innerText = desc;
             document.getElementById("501018.float").innerText = calcFloatPrice(calcValue);
